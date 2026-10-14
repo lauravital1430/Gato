@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAR</title>
+    <style>
+        .contenedor {
+            width: auto;
+            height: 90%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+ 
+        #cat {
+            object-fit: fill;
+            transition: 0.3s;
+        }
+ 
+        #cat:hover {
+            cursor: pointer;
+            transform: scale(110%);
+        }
+ 
+        h1 {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+ 
+<body>
+    <div class="contenedor">
+        <img id="cat" src="img/car.jpg" alt="gato">
+    </div>
+ 
+    <audio id="maullido" src="aud/miau.mp3"></audio>
+
+    <script>
+        console.log("El script se ha ejecutado");
+        
+       
+        let audio = document.getElementById("maullido");
+
+        let botonGato = document.getElementById("cat");
+        botonGato.addEventListener("click", function () {
+            console.log("Miau");
+            audio.play(); 
+        });
+        document.write("<h1>Presiona para hacer miau</h1>");
+        let nombre = "Gatoso";
+        var edad = 1;
+        const nombreSinCambio = "Misifus";
+ 
+        let entero = 10;
+        let decimal = 3.14;
+        let suma = entero + decimal;
+        console.log(suma);
+        window.addEventListener('scroll', funcionEjemplo());
+        function funcionEjemplo() {
+            console.log("Scroll aplicado");
+        }
+    </script>
+</body>
+ 
+</html>
